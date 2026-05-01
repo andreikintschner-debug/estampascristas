@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-bg: #0A0A0A;
+  --color-brand-card: #111008;
+  --color-brand-footer: #070605;
+  --color-brand-border: #2A2510;
+  
+  --color-brand-gold: #D4AF37;
+  --color-brand-gold-mid: #B8941E;
+  --color-brand-gold-light: #F0D060;
+  
+  --color-brand-text: #C8B89A;
+  --color-brand-price: #D4AF37;
+  --color-brand-price-old: #5A4A30;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-200%); }
+  100% { transform: translateX(400%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-text);
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+@keyframes carousel {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.animate-carousel {
+  animation: carousel 35s linear infinite;
+  display: flex;
+  flex-shrink: 0;
+  width: max-content;
+}
+
+.group:hover .animate-carousel {
+  animation-play-state: paused;
+}
+
+@keyframes pulse-scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.animate-pulse-scale {
+  animation: pulse-scale 2s ease-in-out infinite;
+}
