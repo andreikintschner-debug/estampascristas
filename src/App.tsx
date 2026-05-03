@@ -44,6 +44,7 @@ const COUNTDOWN_INITIAL = { hours: 0, minutes: 55, seconds: 19 };
 export default function App() {
   const [timeLeft, setTimeLeft] = useState(COUNTDOWN_INITIAL);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isUpsellOpen, setIsUpsellOpen] = useState(false);
   const [currentDate, setCurrentDate] = useState('');
 
   useEffect(() => {
@@ -152,8 +153,8 @@ export default function App() {
             />
             <FeatureCard 
               icon={<Gift size={26} />}
-              title="5 Bônus Exclusivos"
-              desc="Cinco bônus profissionais grátis para você vender mais e crescer mais rápido."
+              title="3 Bônus Exclusivos"
+              desc="Três bônus profissionais grátis para você vender mais e crescer mais rápido."
             />
             <FeatureCard 
               icon={<FolderArchive size={26} />}
@@ -292,9 +293,12 @@ export default function App() {
               <li className="flex items-start gap-3 opacity-50"><Check size={20} className="text-brand-text shrink-0 mt-0.5" /> <span>Sem atualizações de artes</span></li>
               <li className="flex items-start gap-3 opacity-50"><Check size={20} className="text-brand-text shrink-0 mt-0.5" /> <span>Sem bônus inclusos</span></li>
             </ul>
-            <a href="https://ggcheckout.app/checkout/v5/sHyCMGN1V6cqTTwMjW3c" className="w-full py-3.5 rounded-xl border-2 border-brand-border text-brand-text font-bold hover:bg-brand-border transition-colors block text-center">
+            <button 
+              onClick={() => setIsUpsellOpen(true)}
+              className="w-full py-3.5 rounded-xl border-2 border-brand-border text-brand-text font-bold hover:bg-brand-border transition-colors block text-center"
+            >
               Adquirir Plano Básico
-            </a>
+            </button>
           </div>
 
           {/* PREMIUM PLAN */}
@@ -306,9 +310,9 @@ export default function App() {
             <h3 className="text-2xl font-bold text-white text-center mb-6 mt-2">Acesso Premium Completo</h3>
             <div className="text-center mb-8">
               <p className="text-brand-text/60 text-xs mb-1 uppercase tracking-widest font-semibold flex items-center justify-center gap-1">DE <span className="line-through text-brand-price-old">R$ 129,00</span> POR</p>
-              <div className="text-6xl font-black text-white mb-2">R$ 27,00</div>
+              <div className="text-6xl font-black text-white mb-2">R$ 19,90</div>
               <p className="text-brand-gold font-bold mb-3 text-sm">pagamento único e vitalício</p>
-              <p className="text-brand-gold font-bold mb-1">Economize R$ 102,00</p>
+              <p className="text-brand-gold font-bold mb-1">Economize R$ 109,10</p>
               <p className="text-sm text-brand-text">R$ 161,00 em bônus inclusos GRÁTIS</p>
             </div>
 
@@ -440,7 +444,7 @@ export default function App() {
           
           <div className="space-y-4 text-lg md:text-xl text-brand-text mb-12 max-w-2xl mx-auto">
             <p>Você chegou até aqui porque quer transformar seu negócio de verdade. Agora é a hora de agir.</p>
-            <p>Com <strong className="text-white font-bold">mais de +1500 estampas cristãs exclusivas</strong>, 5 bônus profissionais e <strong className="text-brand-gold font-bold">garantia total de 30 dias</strong>, você não tem nada a perder — só a ganhar.</p>
+            <p>Com <strong className="text-white font-bold">mais de +1500 estampas cristãs exclusivas</strong>, 3 bônus profissionais e <strong className="text-brand-gold font-bold">garantia total de 30 dias</strong>, você não tem nada a perder — só a ganhar.</p>
             <p>Centenas de empreendedores já estão lucrando com esse material. O próximo pode ser você.</p>
           </div>
           
@@ -469,6 +473,94 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* UPSELL MODAL */}
+      <AnimatePresence>
+        {isUpsellOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            <motion.div 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              exit={{ opacity: 0 }} 
+              className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+              onClick={() => setIsUpsellOpen(false)}
+            />
+            
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-md bg-[#0A0A0A] border-[3px] border-brand-gold rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.2)] flex flex-col"
+            >
+              {/* Background Glow */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-gold/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+              {/* Header Banner */}
+              <div className="bg-gradient-to-r from-brand-gold-mid via-brand-gold to-brand-gold-light py-3 px-4 text-center z-10 relative shadow-md">
+                <p className="text-black font-extrabold text-sm md:text-base uppercase tracking-widest flex items-center justify-center gap-2">
+                  <Zap size={18} fill="currentColor" /> 
+                  Espera! Oferta Especial
+                </p>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 md:p-8 flex flex-col items-center z-10 relative text-center">
+                <h2 className="text-xl md:text-2xl font-bold text-white mb-6 leading-tight">
+                  Por apenas <br />
+                  <span className="text-3xl md:text-4xl text-brand-gold font-black inline-block mt-2 mb-2 scale-110 drop-shadow-[0_0_10px_rgba(212,175,55,0.3)]">R$ 5,00</span><br />
+                  a mais leve o Plano Premium!
+                </h2>
+
+                <div className="bg-black/50 border border-brand-gold/20 rounded-xl p-5 w-full mb-8">
+                  <ul className="space-y-3 text-left">
+                    <li className="flex items-center gap-3 text-white font-medium">
+                      <div className="bg-brand-gold/20 p-1 rounded-full text-brand-gold shrink-0 border border-brand-gold/30">
+                        <Check size={16} strokeWidth={3} />
+                      </div>
+                      3 Bônus Exclusivos
+                    </li>
+                    <li className="flex items-center gap-3 text-white font-medium">
+                      <div className="bg-brand-gold/20 p-1 rounded-full text-brand-gold shrink-0 border border-brand-gold/30">
+                        <Check size={16} strokeWidth={3} />
+                      </div>
+                      Atualizações Semanais
+                    </li>
+                    <li className="flex items-center gap-3 text-white font-medium">
+                      <div className="bg-brand-gold/20 p-1 rounded-full text-brand-gold shrink-0 border border-brand-gold/30">
+                        <Check size={16} strokeWidth={3} />
+                      </div>
+                      Alta Resolução
+                    </li>
+                    <li className="flex items-center gap-3 text-white font-medium">
+                      <div className="bg-brand-gold/20 p-1 rounded-full text-brand-gold shrink-0 border border-brand-gold/30">
+                        <Check size={16} strokeWidth={3} />
+                      </div>
+                      Acesso Vitalício
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="w-full space-y-3">
+                  <a 
+                    href="https://ggcheckout.app/checkout/v5/s6i0mdaBmGClpXRvKizZ"
+                    className="w-full px-4 py-4 rounded-xl flex items-center justify-center font-black text-black text-lg bg-gradient-to-r from-brand-gold-mid via-brand-gold to-brand-gold-light hover:brightness-110 shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all transform hover:scale-[1.02] active:scale-[0.98]"
+                  >
+                    Sim! Quero o Premium por R$ 15,00
+                  </a>
+                  <a 
+                    href="https://ggcheckout.app/checkout/v5/sHyCMGN1V6cqTTwMjW3c"
+                    className="w-full px-4 py-3 rounded-lg flex items-center justify-center font-medium text-brand-text/50 text-xs md:text-sm bg-transparent hover:bg-white/5 transition-colors"
+                  >
+                    Não obrigado, quero o básico
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
     </div>
   );
 }
