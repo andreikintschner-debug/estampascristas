@@ -23,20 +23,22 @@ import { motion, AnimatePresence } from 'motion/react';
 import useEmblaCarousel from 'embla-carousel-react';
 
 const carouselImages = [
-  "https://i.postimg.cc/vZb0zYsQ/asset-0001.webp",
-  "https://i.postimg.cc/qv41LJTB/asset-0002.webp",
-  "https://i.postimg.cc/pLRsZWHt/asset-0003.webp",
-  "https://i.postimg.cc/t4pB5qj4/asset-0004.webp",
-  "https://i.postimg.cc/g2mgDzWz/asset-0005.webp",
-  "https://i.postimg.cc/Mpq9D6Sz/asset-0006.webp",
+  "https://i.postimg.cc/PqZ5h2K1/0e4d8e7eecc92744ba11c0980b70b956.webp",
+  "https://i.postimg.cc/CKDxYmJc/2fa5f237df3dd08e8991e58132fa1149.jpg",
+  "https://i.postimg.cc/CKDxYmJr/36bef624b8addbc57d22264924354452.jpg",
+  "https://i.postimg.cc/HL5kHB3N/6a43bd3f5f0ec6aa41c01405122953db-(1).jpg",
+  "https://i.postimg.cc/pd8Lxqkq/6b252a5c5450ff83bd8e8740774df590.jpg",
+  "https://i.postimg.cc/zfWG50pP/e6a8477d0665eaa1a46665e336256db2.jpg",
+  "https://i.postimg.cc/KYL8FJQq/ed8a89899f63c482033cfa498d103a73.jpg",
+  "https://i.postimg.cc/wBJjH0FF/f17c43b60df8d1ceee3a840d19f5ce51.jpg",
 ];
 
 const testimonialImages = [
-  "https://i.postimg.cc/6Qmsg2WV/image.png",
-  "https://i.postimg.cc/cJbq2gxR/image2.png",
-  "https://i.postimg.cc/fbr4ptz0/6.png",
-  "https://i.postimg.cc/R0Dry6Sw/image3.png",
-  "https://i.postimg.cc/VNVyprfj/image4.png"
+  "https://i.postimg.cc/xCv70bwn/img-0136-(3).png",
+  "https://i.postimg.cc/rm1b8tBc/img-0136-(4).png",
+  "https://i.postimg.cc/HxwKp7qm/img-0136-(2).png",
+  "https://i.postimg.cc/63rS9GDD/img-0136-(1).png",
+  "https://i.postimg.cc/3RX6KDs8/img-0136.png"
 ];
 
 const COUNTDOWN_INITIAL = { hours: 0, minutes: 55, seconds: 19 };
