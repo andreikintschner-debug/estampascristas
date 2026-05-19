@@ -349,7 +349,7 @@ export default function App() {
             </div>
 
             <motion.a 
-              href="https://ggcheckout.app/checkout/v5/DJ04PI0Yl3qP4sRLwSLx"
+              href="https://pay.wiapy.com/syOjrvY_p0"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="w-full bg-gradient-to-r from-brand-gold-mid via-brand-gold to-brand-gold-light text-brand-bg py-4 rounded-xl font-black text-lg shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2 transition-colors relative overflow-hidden group text-center"
@@ -545,13 +545,13 @@ export default function App() {
 
                 <div className="w-full space-y-3">
                   <a 
-                    href="https://ggcheckout.app/checkout/v5/s6i0mdaBmGClpXRvKizZ"
+                    href="https://pay.wiapy.com/Iy2M2__Psb"
                     className="w-full px-4 py-4 rounded-xl flex items-center justify-center font-black text-black text-lg bg-gradient-to-r from-brand-gold-mid via-brand-gold to-brand-gold-light hover:brightness-110 shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all transform hover:scale-[1.02] active:scale-[0.98]"
                   >
                     Sim! Quero o Premium por R$ 15,00
                   </a>
                   <a 
-                    href="https://ggcheckout.app/checkout/v5/sHyCMGN1V6cqTTwMjW3c"
+                    href="https://pay.wiapy.com/V2pDIG76go"
                     className="w-full px-4 py-3 rounded-lg flex items-center justify-center font-medium text-brand-text/50 text-xs md:text-sm bg-transparent hover:bg-white/5 transition-colors"
                   >
                     Não obrigado, quero o básico
