@@ -299,7 +299,7 @@ export default function App() {
               onClick={() => setIsUpsellOpen(true)}
               className="w-full py-3.5 rounded-xl border-2 border-brand-border text-brand-text font-bold hover:bg-brand-border transition-colors block text-center"
             >
-              Adquirir Plano Básico
+              Quero o Plano Básico
             </button>
           </div>
 
@@ -354,7 +354,7 @@ export default function App() {
               whileTap={{ scale: 0.97 }}
               className="w-full bg-gradient-to-r from-brand-gold-mid via-brand-gold to-brand-gold-light text-brand-bg py-4 rounded-xl font-black text-lg shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2 transition-colors relative overflow-hidden group text-center"
             >
-              <span className="relative z-10 w-full text-center">Quero Meu Acesso Premium Agora</span>
+              <span className="relative z-10 w-full text-center">Quero o Plano Premium Agora</span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             </motion.a>
           </div>
@@ -459,7 +459,7 @@ export default function App() {
             }}
             className="w-full md:w-auto px-12 bg-gradient-to-r from-brand-gold-mid via-brand-gold to-brand-gold-light text-brand-bg py-5 rounded-xl font-black text-xl shadow-[0_0_30px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2 transition-colors relative overflow-hidden group mx-auto"
           >
-            <span className="relative z-10 w-full text-center">Quero Meu Acesso Premium Agora</span>
+            <span className="relative z-10 w-full text-center">Quero o Plano Premium Agora</span>
             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
           </motion.button>
         </div>
@@ -548,13 +548,13 @@ export default function App() {
                     href="https://pay.wiapy.com/Iy2M2__Psb"
                     className="w-full px-4 py-4 rounded-xl flex items-center justify-center font-black text-black text-lg bg-gradient-to-r from-brand-gold-mid via-brand-gold to-brand-gold-light hover:brightness-110 shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all transform hover:scale-[1.02] active:scale-[0.98]"
                   >
-                    Sim! Quero o Premium por R$ 15,00
+                    Sim! Quero o Plano Premium por R$ 15,00
                   </a>
                   <a 
                     href="https://pay.wiapy.com/V2pDIG76go"
                     className="w-full px-4 py-3 rounded-lg flex items-center justify-center font-medium text-brand-text/50 text-xs md:text-sm bg-transparent hover:bg-white/5 transition-colors"
                   >
-                    Não obrigado, quero o básico
+                    Não, Quero o Plano Básico
                   </a>
                 </div>
               </div>
